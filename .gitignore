@@ -55,3 +55,7 @@ pids
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 books-store.session.sql
+
+# Private logic and keys
+# Commented now for the sake of the test task
+# /src/auth/private

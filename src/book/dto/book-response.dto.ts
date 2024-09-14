@@ -1,21 +1,20 @@
+import { ApiProperty } from '@nestjs/swagger'
 import { Expose } from 'class-transformer'
 
-import { ApiProperty } from '@nestjs/swagger'
-
-export class UserResponseDto {
+export class BookResponse {
   @ApiProperty({ format: 'uuid' })
   @Expose()
   readonly id: string
 
   @ApiProperty()
   @Expose()
-  readonly firstName: string
+  readonly name: string
 
   @ApiProperty()
   @Expose()
-  readonly lastName: string
+  readonly author: string
 
-  @ApiProperty()
+  @ApiProperty({ format: 'date' })
   @Expose()
-  readonly emailAddress: string
+  readonly dateOfPublish: Date
 }

@@ -5,9 +5,10 @@ import { ConfigModule } from '@nestjs/config'
 
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
-import { AuthModule } from './auth/auth.module'
+import { AuthModule } from './auth'
+import { BookModule } from './book'
 import { NODE_ENV } from './constants'
-import { DatabaseModule } from './database/database.module'
+import { DatabaseModule } from './database'
 import { UserModule } from './user'
 
 @Module({
@@ -26,7 +27,8 @@ import { UserModule } from './user'
     }),
     DatabaseModule,
     UserModule,
-    AuthModule
+    AuthModule,
+    BookModule
   ],
   controllers: [AppController],
   providers: [AppService]

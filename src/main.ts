@@ -21,6 +21,7 @@ async function bootstrap() {
     .setDescription('This is the API docs for Books Store')
     .setVersion('1.0')
     .addTag('Books')
+    .addBearerAuth()
     .build()
   const document = SwaggerModule.createDocument(app, config)
   SwaggerModule.setup('swagger', app, document)
