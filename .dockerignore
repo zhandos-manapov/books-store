@@ -4,3 +4,9 @@ Dockerfile
 .git
 .gitignore
 README.md
+test
+.prettierrc
+.eslintrc.js
+.vscode
+.DS_Store
+books-store.session.sql

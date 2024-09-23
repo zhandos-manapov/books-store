@@ -18,11 +18,11 @@ import { UserModule } from './user'
       validationSchema: Joi.object({
         NODE_ENV: Joi.string().required().valid(NODE_ENV.DEVELOPMENT, NODE_ENV.PRODUCTION),
         PORT: Joi.number().required(),
-        POSTGRES_USER: Joi.string().required(),
-        POSTGRES_PASSWORD: Joi.string().required(),
-        POSTGRES_DB: Joi.string().required(),
-        POSTGRES_HOST: Joi.string().required(),
-        POSTGRES_PORT: Joi.number().required()
+        DATABASE_USER: Joi.string().required(),
+        DATABASE_PASSWORD: Joi.string().required(),
+        DATABASE_DB: Joi.string().required(),
+        DATABASE_HOST: Joi.string().required(),
+        DATABASE_PORT: Joi.number().required()
       })
     }),
     DatabaseModule,

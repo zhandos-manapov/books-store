@@ -1,4 +1,3 @@
-import { plainToInstance } from 'class-transformer'
 import { PostgresError } from 'pg-error-enum'
 import { UserService } from 'src/user'
 import { UserEntity } from 'src/user/entities'
@@ -8,7 +7,7 @@ import { Injectable, InternalServerErrorException, NotFoundException, Unauthoriz
 import { JwtService } from '@nestjs/jwt'
 import { InjectRepository } from '@nestjs/typeorm'
 
-import { AuthDto, RegistrationDto, RegistrationResponseDto } from './dto'
+import { AuthDto, RegistrationDto } from './dto'
 import { AuthEntity } from './entities'
 import { UserAlreadyExistException } from './exceptions'
 import { AuthProvider } from './providers'
@@ -47,8 +46,7 @@ export class AuthService {
     } finally {
       await queryRunner.release()
     }
-
-    return plainToInstance(RegistrationResponseDto, userEntity, { excludeExtraneousValues: true })
+    return userEntity
   }
 
   private async createAuth(createAuthDto: AuthDto, queryRunner: QueryRunner) {
