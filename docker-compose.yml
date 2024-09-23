@@ -23,7 +23,7 @@ services:
 
   postgres_db:
     image: postgres:alpine
-    container_name: books-store
+    container_name: books-store-db
     restart: always
     environment:
       POSTGRES_USER: ${DATABASE_USER}
