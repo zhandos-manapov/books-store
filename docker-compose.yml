@@ -9,13 +9,6 @@ services:
       - '${PORT}:${PORT}'
     env_file:
       - .env
-    # environment:
-    #   - DATABASE_HOST=${DATABASE_HOST}
-    #   - DATABASE_PORT=${DATABASE_PORT}
-    #   - DATABASE_USER=${DATABASE_USER}
-    #   - DATABASE_PASSWORD=${DATABASE_PASSWORD}
-    #   - DATABASE_DB=${DATABASE_DB}
-    #   - NODE_ENV=${NODE_ENV}
     depends_on:
       - postgres_db
     networks:
